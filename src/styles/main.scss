@@ -1,0 +1,201 @@
+@import 'mixins';
+@import 'base';
+@import 'grid';
+
+.card {
+  width: 100%;
+  height: 100%;
+  &__container {
+    margin: 2rem;
+    background-color: #fcead2;
+    width: 40.1rem;
+    height: 56.3rem;
+    padding: 1rem;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  &__bg-image {
+    &-container {
+      height: 30rem;
+    }
+
+    &-dave {
+      background-image: url(../images/daveBook.png);
+    }
+    &-nick {
+      background-image: url(../images/nickBook2.png);
+    }
+    &-craig {
+      background-image: url(../images/Craigbg3.png);
+    }
+    &-geoff {
+      background-image: url(../images/GeoffBg.png);
+    }
+    &-brenton {
+      background-image: url(../images/BMaskGroup1.png);
+    }
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+  }
+  &__avatar {
+    &-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // Special Class for Nick Avatar to be on the Left.
+      &-nick {
+        align-items: flex-start;
+      }
+    }
+    position: relative;
+    bottom: -3.9rem;
+    left: 0rem;
+    opacity: 1;
+    width: auto;
+    height: 25.1rem;
+  }
+  &__name {
+    &-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      filter: drop-shadow(2px 3px 0px rgba(0, 0, 0, 1));
+    }
+    position: relative;
+    bottom: 1rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    border: 2px solid #000;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    font-size: 2.5rem;
+    width: max-content;
+    white-space: nowrap;
+    clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 4% 100%);
+    &::after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      bottom: 1rem;
+      width: 90%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: #52d18e;
+      -ms-transform: skew(10deg, 0deg);
+      -webkit-transform: skew(10deg, 0deg);
+      transform: skew(10deg, 0deg);
+      border-left: 5px solid #000;
+    }
+    &-dave {
+      background-color: #c2d886;
+      &::after {
+        background: #c2d886;
+      }
+    }
+    &-nick {
+      background-color: #cd572f;
+      &::after {
+        background: #cd572f;
+      }
+    }
+    &-craig {
+      background-color: #ee7758;
+      &::after {
+        background: #ee7758;
+      }
+    }
+    &-geoff {
+      background-color: #eb8a94;
+      &::after {
+        background: #eb8a94;
+      }
+    }
+    &-brenton {
+      background-color: #52d18e;
+      &::after {
+        background: #52d18e;
+      }
+    }
+  }
+  &__info {
+    filter: drop-shadow(2px 3px 0px rgba(0, 0, 0, 1));
+    margin: 2rem 0.5rem;
+    &-m {
+      z-index: 5;
+    }
+    &-text {
+      margin-top: 4rem;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 1.2rem;
+      text-align: left;
+      position: relative;
+      left: -5.2rem;
+      top: 0;
+      background-color: #7d6736;
+      color: #fff;
+      padding: 1rem 2rem 1rem 2rem;
+      width: 13rem;
+      height: 18rem;
+    }
+    &-item {
+      position: relative;
+      &-dave {
+        background-color: #c2d886;
+      }
+      &-nick {
+        background-color: #cd572f;
+      }
+      &-craig {
+        background-color: #ee7758;
+      }
+      &-geoff {
+        background-color: #eb8a94;
+      }
+      &-brenton {
+        background-color: #fddc60;
+      }
+      width: 13.6rem;
+      height: 3.1rem;
+      padding: 0.5rem;
+      margin: 1rem;
+      font-size: 1.5rem;
+      border: 1px solid #000;
+      clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+      &:last-child {
+        margin-bottom: 3.4rem;
+      }
+      &-m {
+        width: 11.6rem;
+        background-color: #fff;
+        clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0 100%);
+        padding-left: 2rem;
+        position: relative;
+        left: -3.1rem;
+        &::after {
+          content: ' ';
+          display: block;
+          position: absolute;
+          height: 100%;
+          top: 0;
+          left: 0.4rem;
+          z-index: -1;
+          background: #000;
+          // -ms-transform: skew(-23deg, 0deg);
+          // -webkit-transform: skew(-23deg, 0deg);
+          transform: skew(-20deg, 0deg);
+          border-left: 1.5px solid #000;
+        }
+      }
+    }
+  }
+}

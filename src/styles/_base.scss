@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  //defines the rem! 1 rem = 10 px
+  font-size: 62.5%;
+
+  @include responsive(tab-land1200) {
+    font-size: 50%;
+  }
+  @include responsive(tab-port900) {
+    font-size: 45%;
+  }
+  @include responsive(phone600) {
+    font-size: 40%;
+  }
+  @include responsive(phone600) {
+    font-size: 38%;
+  }
+
+  @include responsive(big-desktop1800) {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #112311;
+  color: #554;
+}
