@@ -18,12 +18,12 @@ const Card = ({
     let years = today.getFullYear() - birthDate.getFullYear();
     let months = today.getMonth() - birthDate.getMonth();
     let days = today.getDate() - birthDate.getDate();
-    if (months < 0 || (months === 0 && today.getDate() < birthDate.getDate())) {
-      years--;
-      months += 12;
-    } else if (days < 0) {
+    if (days < 0) {
       months--;
       days += 30;
+    } else if (months < 0) {
+      years--;
+      months += 12;
     }
     return `${('0' + years).slice(-2)}Y ${('0' + months).slice(-2)}M ${(
       '0' + days
